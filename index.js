@@ -13,7 +13,7 @@ app.use(bodyParser.json({extended : true}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/', Router);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server is Running Successfully on PORT ${PORT}`));
 
 const DBurl = process.env.DB_URL;
